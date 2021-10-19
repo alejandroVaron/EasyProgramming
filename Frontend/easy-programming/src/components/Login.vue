@@ -13,9 +13,11 @@
       <input type="password" id="inputPassword" v-model="password">
     </div>
     <div id="divButtonLogin">
+      <router-link :to="'/'+route">
       <button id="buttonLogin" @click="logIn()">
         Iniciar sesión
       </button>
+      </router-link>
     </div>
   </div>
 </div>
@@ -26,12 +28,16 @@ export default{
   data(){
     return{
       email:"",
-      password: ""
+      password: "",
+      route: ""
     }
   },
   methods: {
     logIn(){
-      console.log(this.email+" "+this.password);
+      if(this.email=="user"&&this.password=="user"){
+        console.log("as"+this.email+" "+this.password);
+        this.route = "node"
+      }
     }
   }
 }
