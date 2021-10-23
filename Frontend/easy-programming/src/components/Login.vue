@@ -14,7 +14,7 @@
     </div>
     <div id="divButtonLogin">
       <router-link :to="'/'+route">
-      <button id="buttonLogin" @click="logIn()">
+      <button class="button" @click="logIn()">
         Iniciar sesión
       </button>
       </router-link>
@@ -93,5 +93,26 @@ export default{
 }
 #buttonLogin{
   height: 3vh;
+}
+
+.button {
+  padding: 0.5vh 1vh;
+  font-size: 2vh;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px #999;
+}
+
+.button:hover {background-color: #d6d6d6}
+
+.button:active {
+  background-color: #9b9999;
+  box-shadow: 0 4px #999;
+  transform: translateY(3px);
 }
 </style>
